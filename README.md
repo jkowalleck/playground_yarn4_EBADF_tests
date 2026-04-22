@@ -1,4 +1,4 @@
-# playground_yarn4_EBADF_tests
+# playground for yarn4 issue with `EBADF`
 
 tests for [yarn issue 7065](https://github.com/yarnpkg/berry/issues/7065)
 
