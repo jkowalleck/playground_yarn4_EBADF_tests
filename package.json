@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "name": "@jkowalleck/playground_yarn4_issye7065",
+  "description": "playground to test yarn4 issue 7065",
+  "packageManager": "yarn@4.14.1"
+}
