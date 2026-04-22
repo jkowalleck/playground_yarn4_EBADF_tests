@@ -55,7 +55,7 @@ jobs:
           corepack enable yarn
       - name: show node version
         run: node --version
-      - name: show node version
+      - name: show yarn version
         run: yarn --version
       - name: Setup subject
         run: yarn install --immutable
