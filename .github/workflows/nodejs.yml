@@ -40,19 +40,23 @@ jobs:
             experimental: true
     timeout-minutes: 15
     steps:
-      - name: Checkout
-        # see https://github.com/actions/checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup yarn
         run: |
           npm uninstall -g yarn
           corepack enable yarn
+      - name: show node version
+        run: node --version
+      - name: show node version
+        run: yarn --version
       - name: Setup subject
         run: yarn install --immutable
       - name: run tests
