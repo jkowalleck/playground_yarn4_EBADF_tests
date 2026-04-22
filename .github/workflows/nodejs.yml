@@ -15,7 +15,6 @@ permissions: {}
 jobs:
   test:
     name: >
-      test
       node${{ matrix.node-version }}
       ${{ matrix.os }}
       ${{ (matrix.experimental == true) && '[experimental]' || '' }}
@@ -38,7 +37,12 @@ jobs:
           - 'windows-latest'
           - 'macos-latest'
         include:
+          # mark some experimental
           - node-version: "25"
+            experimental: true
+          - node-version: "25-nightly"
+            experimental: true
+          - node-version: "26-nightly"
             experimental: true
     timeout-minutes: 15
     steps:
