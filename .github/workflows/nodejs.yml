@@ -27,7 +27,9 @@ jobs:
           ## see also: https://nodejs.org/en/about/releases/
           - '26-nightly'
           - '25-nightly'
-          - "25"      # Current
+          - '24-nightly'
+          - '26'      # Current
+          - '25'
           - '24'      # LTS
           - '22'
           - '20'
@@ -38,6 +40,8 @@ jobs:
           - 'macos-latest'
         include:
           # mark some experimental
+          - node-version: "24-nightly"
+            experimental: true
           - node-version: "25"
             experimental: true
           - node-version: "25-nightly"
