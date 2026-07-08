@@ -67,6 +67,8 @@ jobs:
         run: node --version
       - name: show yarn version
         run: yarn --version
+      - name: env info
+        run: yarn dlx -q envinfo --preset jest
       - name: Setup subject
         run: yarn install --immutable
       - name: run tests
