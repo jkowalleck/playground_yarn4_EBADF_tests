@@ -1,6 +1,8 @@
 # playground for yarn4 issue with `EBADF`
 
-tests for [yarn issue 7065](https://github.com/yarnpkg/berry/issues/7065)
+tests for 
+- [yarn issue 7065](https://github.com/yarnpkg/berry/issues/7065)
+- [yarn issue 7211](https://github.com/yarnpkg/berry/issues/7211)
 
 test matrix as defined in [here](./.github/workflows/nodejs.yml)
 
